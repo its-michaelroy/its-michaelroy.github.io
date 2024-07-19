@@ -1,0 +1,22 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Roy;Michael;;;
+FN:Michael Roy
+ORG:🇧🇷 Brazil & 🇺🇸 USA
+ADR;TYPE=WORK:
+TITLE:Software Engineer | Veteran | DevOps Engineer
+TEL;TYPE=CELL:+14127631887
+TEL;TYPE=WORK:
+TEL;TYPE=HOME:
+TEL;TYPE=MSG:
+EMAIL;TYPE=WORK:michael.roy@mrcodewizard.com
+URL;TYPE=Digital Business Card:
+URL:https://mrcodewizard.com/
+URL;TYPE=Website:https://mrcodewizard.com/
+URL;TYPE=GitHub:https://github.com/its-michaelroy
+URL;TYPE=LinkedIn:https://linkedin.com/in/michaelroy91
+URL;TYPE=Buy me a coffee:https://www.buymeacoffee.com/michaelroy
+KEY;TYPE=PGP;ENCODING=b:
+NOTE:
+UID:EnBizCard-100639820
+END:VCARD
