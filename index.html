@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" style="background-color: rgb(5, 150, 105)">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ENFWPB8R56"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-ENFWPB8R56");
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, nofollow" />
@@ -22,6 +36,8 @@
     </script>
     <!---->
     <title>Michael Roy's Digital Business Card</title>
+    <!--Favicon added below-->
+    <link rel="icon" href="./photo.png" type="image/png" />
     <style>
       #body {
         font-family: sans-serif;
@@ -57,7 +73,7 @@
         color: #eee;
       }
       .cardColor {
-        color: #222 !important;
+        background-color: #222 !important;
       }
       .textColor {
         color: #eee !important;
@@ -83,6 +99,30 @@
       .dlBtn p {
         margin: 5px 0 0;
       }
+      .pdfBtn:hover,
+      .docxBtn:hover,
+      .jpegBtn:hover,
+      .dlBtn:hover,
+      #cta:hover,
+      .actionBtn:hover a,
+      .actionsC a:hover {
+        background-color: #0b3d0b; /* Darker green for hover */
+        color: #4caf50; /* Green text color on hover */
+        transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+      }
+      .pdfBtn,
+      .docxBtn,
+      .jpegBtn,
+      .dlBtn,
+      .actionBtn a,
+      .actionsC a {
+        color: #4caf50; /* Green text color */
+      }
+      .button-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
     </style>
     <!---->
     <!---->
@@ -92,10 +132,14 @@
     <div
       id="modal"
       style="
-        background-color: rgb(62, 60, 60);
+        background-color: rgb(62, 60, 60, 0.95);
         visibility: hidden;
         top: 2rem;
         opacity: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 35%;
       "
     >
       <a id="close" class="closeColor"
@@ -306,7 +350,8 @@
         aria-label="Save Contact"
         style="background-color: rgb(5, 150, 105)"
         href="michaelroy.vcf"
-        ><div class="icon iconColor">
+      >
+        <div class="icon iconColor">
           <svg
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
@@ -350,6 +395,7 @@
         <div class="actionsC">
           <div class="actionBtn">
             <a
+              id="emailButton"
               href="mailto:michael.roy@mrcodewizard.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -392,6 +438,7 @@
         <div class="actionsC">
           <div class="actionBtn">
             <a
+              id="websiteButton"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Website"
@@ -577,16 +624,17 @@
                 />
               </div>
               <div class="controls cardColor">
-                <p class="title">Choose a format to download my resume</p>
+                <p class="title">Choose a format to download my resume!</p>
 
                 <div class="docDl button-row">
-                  <div style="display: flex; justify-content: center">
+                  <div class="button-container">
                     <div>
                       <a
+                        id="pdfButton"
                         href="./media/Michael_Roy_Dev_Resume_v10.pdf"
                         download=""
                         target="_blank"
-                        class="dlBtn"
+                        class="dlBtn pdfBtn"
                         style="background-color: rgb(5, 150, 105)"
                       >
                         <div class="icon iconColor">
@@ -619,6 +667,7 @@
                     </div>
                     <div>
                       <a
+                        id="docxButton"
                         href="./media/Michael_Roy_Dev_Resume_v10.docx"
                         download=""
                         target="_blank"
@@ -655,6 +704,7 @@
                     </div>
                     <div>
                       <a
+                        id="jpegButton"
                         href="./media/Michael_Roy_Dev_Resume_v10.jpeg"
                         download=""
                         target="_blank"
